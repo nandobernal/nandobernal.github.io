@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Bernal Zamorano | Senior Chef & Kitchen Supervisor</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- UI Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0f0f0f] text-[#e5e5e5] font-sans overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-500" id="main-nav">
+        <div class="text-gold font-serif text-xl tracking-widest uppercase">FBZ</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light">
+            <a href="#experience" class="hover:text-gold transition-colors">Experience</a>
+            <a href="#skills" class="hover:text-gold transition-colors">Skills</a>
+            <a href="#portfolio" class="hover:text-gold transition-colors">Portfolio</a>
+            <a href="#education" class="hover:text-gold transition-colors">Background</a>
+        </div>
+        <a href="#" class="btn-gold-outline px-6 py-2 text-xs uppercase tracking-widest border border-[#C5A059] text-gold hover:bg-[#C5A059] hover:text-black transition-all">
+            Download Full CV
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <img src="https://r2-bucket.flowith.net/f/43a4fba1de9f2e6f/professional_chef_michelin_kitchen_action_index_0.jpeg" 
+                 alt="Fernando Bernal Zamorano" 
+                 class="w-full h-full object-cover parallax-bg">
+        </div>
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+            <h1 class="font-serif text-5xl md:text-8xl mb-4 opacity-0" id="hero-title">Fernando Bernal Zamorano</h1>
+            <p class="text-gold font-sans uppercase tracking-[0.3em] text-lg md:text-xl mb-8 opacity-0" id="hero-subtitle">Senior Chef | Kitchen Supervisor</p>
+            <p class="text-gray-300 italic max-w-2xl mx-auto mb-10 text-lg opacity-0" id="hero-tagline">
+                Bridging Michelin-level precision with high-volume operational excellence. 18+ years of culinary innovation.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center opacity-0" id="hero-cta">
+                <a href="#contact" class="px-10 py-4 bg-[#C5A059] text-black font-semibold uppercase tracking-widest hover:bg-white transition-all duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="text-gold w-8 h-8"></i>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="bg-[#1a1a1a] border-y border-white/5 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-container">
+                <div class="stat-item">
+                    <div class="text-gold text-4xl font-serif mb-2" data-target="18">0</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-gold text-4xl font-serif mb-2" data-target="250">0</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Couverts Capacity</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-gold text-4xl font-serif mb-2" data-target="15">0</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">% Cost Reduction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-gold text-4xl font-serif mb-2" data-target="12">0</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Staff Management</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-24 relative overflow-hidden">
+        <div class="marble-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="section-title text-center mb-20">The Culinary Journey</h2>
+            <div class="max-w-4xl mx-auto space-y-12" id="timeline">
+                <!-- Data populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section id="skills" class="py-24 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16">Expertise & Mastery</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="font-serif text-2xl text-gold mb-8 flex items-center">
+                        <i data-lucide="utensils" class="mr-3"></i> Culinary Artistry
+                    </h3>
+                    <div class="space-y-6" id="culinary-skills"></div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-2xl text-gold mb-8 flex items-center">
+                        <i data-lucide="briefcase" class="mr-3"></i> Operational Excellence
+                    </h3>
+                    <div class="space-y-6" id="op-skills"></div>
+                </div>
+            </div>
+            
+            <div class="mt-20 border-t border-white/5 pt-16">
+                <h3 class="text-center font-serif text-2xl mb-12">Linguistic Proficiency</h3>
+                <div class="max-w-2xl mx-auto space-y-8" id="languages">
+                    <!-- Progress bars -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section id="portfolio" class="py-24 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16">Visual Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="gallery">
+                <div class="gallery-item group">
+                    <img src="https://r2-bucket.flowith.net/f/7421d6821de8fb31/fine_dining_meat_plating_photography_index_2.jpeg" alt="Meat Plating" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer">
+                    <div class="mt-4">
+                        <h4 class="font-serif text-xl">Signature Plating</h4>
+                        <p class="text-xs uppercase tracking-widest text-gold mt-1">Proteins & Technique</p>
+                    </div>
+                </div>
+                <div class="gallery-item group">
+                    <img src="https://r2-bucket.flowith.net/f/f38c9455da54d371/gourmet_mediterranean_seafood_plated_dish_index_1.jpeg" alt="Mediterranean Seafood" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer">
+                    <div class="mt-4">
+                        <h4 class="font-serif text-xl">Mediterranean Fusion</h4>
+                        <p class="text-xs uppercase tracking-widest text-gold mt-1">Gourmet Seafood</p>
+                    </div>
+                </div>
+                <div class="gallery-item group">
+                    <img src="https://r2-bucket.flowith.net/f/c7f08835d740c160/michelin_mediterranean_plated_dish_index_3.jpeg" alt="Dessert Textures" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer">
+                    <div class="mt-4">
+                        <h4 class="font-serif text-xl">Texture & Design</h4>
+                        <p class="text-xs uppercase tracking-widest text-gold mt-1">Modern Gastronomy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-24 bg-[#111]">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16">Education & Credentials</h2>
+            <div class="grid md:grid-cols-3 gap-8" id="edu-cards">
+                <!-- Cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer id="contact" class="py-32 bg-black border-t border-white/5 relative">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gold font-serif text-3xl md:text-5xl mb-12 max-w-3xl mx-auto leading-tight">
+                "Available for consultancy, kitchen leadership roles, and culinary project management."
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <button class="px-12 py-5 bg-[#C5A059] text-black font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl shadow-gold/10">
+                    Book a Consultation
+                </button>
+            </div>
+            <div class="mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs tracking-widest uppercase">
+                <p>&copy; 2026 Fernando Bernal Zamorano</p>
+                <div class="flex space-x-6 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-gold">LinkedIn</a>
+                    <a href="#" class="hover:text-gold">Instagram</a>
+                    <a href="#" class="hover:text-gold">Full CV PDF</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action -->
+    <div class="fixed bottom-8 right-8 z-[100] md:hidden">
+        <button class="bg-[#C5A059] p-4 rounded-full shadow-2xl text-black">
+            <i data-lucide="calendar"></i>
+        </button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

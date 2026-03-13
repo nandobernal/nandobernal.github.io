@@ -1,0 +1,148 @@
+:root {
+    --gold: #C5A059;
+    --slate: #1a1a1a;
+    --charcoal: #0f0f0f;
+}
+
+body {
+    background-color: var(--charcoal);
+    color: #e5e5e5;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+/* Timeline Custom */
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    border-left: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+/* Parallax and Backgrounds */
+.marble-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    pointer-events: none;
+}
+
+.parallax-bg {
+    will-change: transform;
+}
+
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progress Bars */
+.progress-container {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gold);
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* Button Refinement */
+.btn-gold-outline {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-gold-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gold);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-gold-outline:hover::before {
+    left: 0;
+}
